@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Invitation – Eng. Hady & Eng. Yasmeen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #fff9f4;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: #fef0e4;
+    }
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      margin-bottom: 0.2em;
+    }
+    header h2 {
+      font-size: 1.5em;
+      margin-top: 0;
+    }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .countdown {
+      font-size: 2em;
+      margin: 20px 0;
+    }
+    .message, .rsvp {
+      max-width: 500px;
+      margin: auto;
+    }
+    input, textarea {
+      width: 100%;
+      margin: 5px 0 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      background-color: #d07070;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    footer {
+      background: #f3d6cc;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop hidden>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
+  <header>
+    <h1>Eng. Hady & Eng. Yasmeen</h1>
+    <h2>Invite you to celebrate our wedding</h2>
+    <p>at Guard's Hotel, Egypt – 4th July 2025</p>
+  </header>
+
+  <section id="countdown">
+    <h2>Countdown to Our Big Day</h2>
+    <div class="countdown" id="timer"></div>
+  </section>
+
+  <section class="message">
+    <h2>Send Us a Message</h2>
+    <textarea placeholder="Your lovely message to us..."></textarea>
+    <button>Send Message</button>
+  </section>
+
+  <section class="rsvp">
+    <h2>RSVP</h2>
+    <input type="text" placeholder="Your Name" />
+    <input type="email" placeholder="Your Email" />
+    <button>Confirm Attendance</button>
+  </section>
+
+  <footer>
+    With love, Hady & Yasmeen ♥
+  </footer>
+
+  <script>
+    const eventDate = new Date("2025-07-04T00:00:00").getTime();
+    const timer = document.getElementById("timer");
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      timer.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }, 1000);
+  </script>
+</body>
+</html>
