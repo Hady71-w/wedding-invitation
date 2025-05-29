@@ -35,19 +35,14 @@
       height: 30px;
       background-image: url('https://cdn.pixabay.com/photo/2017/01/31/20/24/cherry-blossom-2023413_1280.png');
       background-size: cover;
+      background-repeat: no-repeat;
       animation: fall 10s linear infinite;
       pointer-events: none;
-      z-index: 0;
+      z-index: 999;
     }
     @keyframes fall {
-      0% {
-        transform: translateY(-100px) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(110vh) rotate(360deg);
-        opacity: 0;
-      }
+      0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
     }
     header {
       text-align: center;
@@ -120,6 +115,23 @@
       border-radius: 10px;
       cursor: pointer;
     }
+    .certificate {
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .certificate img {
+      max-width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .signatures {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 30px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.8em;
+    }
     footer {
       background: #f3d6cc;
       padding: 20px;
@@ -146,6 +158,21 @@
   <section id="countdown">
     <h2>Countdown to Our Big Day</h2>
     <div class="countdown" id="timer"></div>
+  </section>
+
+  <section class="certificate">
+    <p style="font-size: 1.5em; font-family: 'Amiri', serif; direction: rtl; line-height: 1.8; margin-bottom: 30px;">
+      بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ<br>
+      وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا<br>
+      وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ<br>
+      إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
+    </p>
+    <h2>Marriage Verse & Blessing</h2>
+    <img src="/mnt/data/41926c9f-f5b9-44b9-b66d-a4d4452e55a0.png" alt="Marriage Certificate Decorative" />
+    <div class="signatures">
+      <div>العريس<br>Hady</div>
+      <div>العروسة<br>Yasmeen</div>
+    </div>
   </section>
 
   <section class="map">
@@ -185,7 +212,6 @@
       timer.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }, 1000);
 
-    // Generate falling petals
     function createPetal() {
       const petal = document.createElement('div');
       petal.classList.add('petal');
