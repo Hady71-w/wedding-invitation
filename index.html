@@ -9,20 +9,9 @@
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background: url('https://www.transparenttextures.com/patterns/paper-fibers.png') repeat, #fff9f4;
+      background: #fff9f4;
       color: #333;
       scroll-behavior: smooth;
-      position: relative;
-      overflow-x: hidden;
-    }
-    header p {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 1.2em;
-}
-
-    
-    
     }
     header {
       text-align: center;
@@ -31,15 +20,18 @@
     }
     header h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 3.2em;
+      font-size: 3em;
       margin-bottom: 0.2em;
     }
     header h2 {
-      font-size: 1.6em;
+      font-size: 1.5em;
       margin-top: 0;
     }
+    header p {
+      font-size: 1.2em;
+    }
     section {
-      padding: 50px 20px;
+      padding: 40px 20px;
       text-align: center;
     }
     .countdown {
@@ -78,86 +70,66 @@
       height: 400px;
       border: 0;
     }
-    .music-control {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .music-control button {
-      padding: 10px 20px;
-      font-size: 1em;
-      background-color: #b85b5b;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-    .certificate {
-      text-align: center;
-      padding: 50px 20px;
-    }
-    .certificate img {
-      max-width: 90%;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .signatures {
-      display: flex;
-      justify-content: center;
-      gap: 50px;
-      margin-top: 30px;
-      font-family: 'Great Vibes', cursive;
-      font-size: 1.8em;
-    }
     footer {
       background: #f3d6cc;
       padding: 20px;
       font-size: 0.9em;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <audio id="weddingMusic" loop>
+  <!-- Background music -->
+  <audio id="bgMusic" autoplay loop>
     <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
-  <div class="music-control">
-    <button onclick="document.getElementById('weddingMusic').play()">Play Background Music</button>
+  <!-- Music Control Button -->
+  <div style="text-align:center; margin: 20px;">
+    <button onclick="toggleMusic()">🔊 Toggle Music</button>
   </div>
 
-<header>
-  <h1>Hady & Yasmeen</h1>
-  <h2>Invite you to celebrate our wedding</h2>
-  <p>at Guard's Hotel-Bardees Hall, Egypt – 4th July 2025</p>
-</header>
+  <!-- Header Section -->
+  <header>
+    <h1>Eng. Hady & Eng. Yasmeen</h1>
+    <h2>Invite you to celebrate our wedding</h2>
+    <p>at Guard's Hotel, Egypt – 4th July 2025</p>
+  </header>
 
+  <!-- Countdown Section -->
   <section id="countdown">
     <h2>Countdown to Our Big Day</h2>
     <div class="countdown" id="timer"></div>
   </section>
 
-
+  <!-- Map Section -->
   <section class="map">
     <h2>Location</h2>
     <iframe src="https://www.google.com/maps?q=%D9%81%D9%86%D8%AF%D9%82+%D8%A7%D9%84%D8%AD%D8%B1%D8%B3+%D8%A7%D9%84%D8%AD%D8%AF%D9%88%D8%AF%D8%8C+%D8%B4%D9%8A%D8%B1%D8%A7%D8%AA%D9%88%D9%86+%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B1%D8%8C+%D9%82%D8%B3%D9%85+%D8%A7%D9%84%D9%86%D8%B2%D9%87%D8%A9%D8%8C+%D9%85%D8%AD%D8%A7%D9%81%D8%B8%D8%A9+%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9&output=embed"></iframe>
   </section>
 
+  <!-- Message Section -->
   <section class="message">
     <h2>Send Us a Message</h2>
     <textarea placeholder="Your lovely message to us..."></textarea>
     <button>Send Message</button>
   </section>
 
+  <!-- RSVP Section -->
   <section class="rsvp">
     <h2>RSVP</h2>
     <input type="text" placeholder="Your Name" />
+    <input type="email" placeholder="Your Email" />
     <button>Confirm Attendance</button>
   </section>
 
+  <!-- Footer -->
   <footer>
     With love, Hady & Yasmeen ♥
   </footer>
 
+  <!-- Countdown Script -->
   <script>
     const eventDate = new Date("2025-07-04T00:00:00").getTime();
     const timer = document.getElementById("timer");
@@ -174,7 +146,14 @@
       timer.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }, 1000);
 
-    
+    function toggleMusic() {
+      const music = document.getElementById('bgMusic');
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
   </script>
 </body>
 </html>
