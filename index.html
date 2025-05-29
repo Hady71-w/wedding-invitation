@@ -15,8 +15,7 @@
       position: relative;
       overflow-x: hidden;
     }
-    
-    
+
     header {
       text-align: center;
       padding: 50px 20px;
@@ -25,16 +24,14 @@
     header h1 {
       font-family: 'Great Vibes', cursive;
       font-size: 3.2em;
-        word-spacing: 0.5em; /* Adds space between words */
+      word-spacing: 0.5em;
       margin-bottom: 0.4em;
     }
     header h2 {
       font-size: 1.6em;
-  margin-top: 0.5em;
-  margin-bottom: 1em; /* extra spacing below */
+      margin-top: 0.5em;
+      margin-bottom: 1em;
     }
-
-
     section {
       padding: 50px 20px;
       text-align: center;
@@ -43,24 +40,9 @@
       font-size: 2em;
       margin: 20px 0;
     }
-    .message, .rsvp {
+    .message {
       max-width: 500px;
       margin: auto;
-    }
-    input, textarea {
-      width: 100%;
-      margin: 5px 0 15px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    button {
-      background-color: #d07070;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
     }
     .map {
       width: 100%;
@@ -123,16 +105,15 @@
   </div>
 
   <header>
-    <h1>Hady   &   Yasmeen</h1>
+    <h1>Hady & Yasmeen</h1>
     <h2>Invite you to celebrate our wedding</h2>
-      <p style="text-align: center; font-size: 1.2em;">at Guard's Hotel-Bardees Hall, Egypt – 4th July 2025</p>
-    </header>
+    <p style="text-align: center; font-size: 1.2em;">at Guard's Hotel-Bardees Hall, Egypt – 4th July 2025</p>
+  </header>
 
   <section id="countdown">
     <h2>Countdown to Our Big Day</h2>
     <div class="countdown" id="timer"></div>
   </section>
-
 
   <section class="map">
     <h2>Location</h2>
@@ -147,8 +128,7 @@
 
   <section class="rsvp">
     <h2>RSVP</h2>
-    <input type="text" placeholder="Your Name" />
-    <button>Confirm Attendance</button>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdtUNMBQPx4zQhtOWwyGnfQ-wfUfXw-CQvIV8ptFBXAcK27cQ/viewform?embedded=true" width="640" height="932" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </section>
 
   <footer>
@@ -170,8 +150,6 @@
 
       timer.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }, 1000);
-
-    
   </script>
 </body>
 </html>
