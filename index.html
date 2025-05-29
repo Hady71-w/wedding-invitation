@@ -15,7 +15,6 @@
       position: relative;
       overflow-x: hidden;
     }
-
     header {
       text-align: center;
       padding: 50px 20px;
@@ -40,7 +39,7 @@
       font-size: 2em;
       margin: 20px 0;
     }
-    .message, .rsvp {
+    .form-section {
       max-width: 500px;
       margin: auto;
     }
@@ -85,23 +84,6 @@
       border-radius: 10px;
       cursor: pointer;
     }
-    .certificate {
-      text-align: center;
-      padding: 50px 20px;
-    }
-    .certificate img {
-      max-width: 90%;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .signatures {
-      display: flex;
-      justify-content: center;
-      gap: 50px;
-      margin-top: 30px;
-      font-family: 'Great Vibes', cursive;
-      font-size: 1.8em;
-    }
     footer {
       background: #f3d6cc;
       padding: 20px;
@@ -135,20 +117,13 @@
     <iframe src="https://www.google.com/maps?q=%D9%81%D9%86%D8%AF%D9%82+%D8%A7%D9%84%D8%AD%D8%B1%D8%B3+%D8%A7%D9%84%D8%AD%D8%AF%D9%88%D8%AF%D8%8C+%D8%B4%D9%8A%D8%B1%D8%A7%D8%AA%D9%88%D9%86+%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B1%D8%8C+%D9%82%D8%B3%D9%85+%D8%A7%D9%84%D9%86%D8%B2%D9%87%D8%A9%D8%8C+%D9%85%D8%AD%D8%A7%D9%81%D8%B8%D8%A9+%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9&output=embed"></iframe>
   </section>
 
-  <section class="message">
-    <h2>Send Us a Message</h2>
-    <form action="https://formsubmit.co/hadyhany446@gmail.com" method="POST">
-      <textarea name="message" placeholder="Your lovely message to us..." required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <section class="rsvp">
-    <h2>RSVP</h2>
+  <section class="form-section">
+    <h2>RSVP & Message</h2>
     <form action="https://formsubmit.co/hadyhany446@gmail.com" method="POST">
       <input name="name" type="text" placeholder="Your Name" required />
       <input name="attendance" type="text" placeholder="Will you attend? (Yes/No)" required />
-      <button type="submit">Confirm Attendance</button>
+      <textarea name="message" placeholder="Your lovely message to us..." required></textarea>
+      <button type="submit">Submit</button>
     </form>
   </section>
 
