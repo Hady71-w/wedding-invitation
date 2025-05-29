@@ -122,13 +122,19 @@
 
   <section class="message">
     <h2>Send Us a Message</h2>
-    <textarea placeholder="Your lovely message to us..."></textarea>
-    <button>Send Message</button>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdtUNMBQPx4zQhtOWwyGnfQ-wfUfXw-CQvIV8ptFBXAcK27cQ/formResponse" method="POST" target="_blank">
+      <textarea name="entry.1122334455" placeholder="Your lovely message to us..." required></textarea>
+    <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <section class="rsvp">
-    <h2>RSVP</h2>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdtUNMBQPx4zQhtOWwyGnfQ-wfUfXw-CQvIV8ptFBXAcK27cQ/viewform?embedded=true" width="640" height="932" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  <h2>RSVP</h2>
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSdtUNMBQPx4zQhtOWwyGnfQ-wfUfXw-CQvIV8ptFBXAcK27cQ/formResponse" method="POST" target="_blank">
+    <input name="entry.1234567890" type="text" placeholder="Your Name" required />
+    <input name="entry.0987654321" type="text" placeholder="Will you attend? (Yes/No)" required />
+    <button type="submit">Confirm Attendance</button>
+  </form>
   </section>
 
   <footer>
