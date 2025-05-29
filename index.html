@@ -9,26 +9,30 @@
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background: #fff9f4;
+      background: url('https://www.transparenttextures.com/patterns/paper-fibers.png') repeat, #fff9f4;
       color: #333;
       scroll-behavior: smooth;
     }
     header {
       text-align: center;
-      padding: 50px 20px;
-      background: #fef0e4;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #fdecea, #fff0f5);
+      background-image: url('https://www.pngall.com/wp-content/uploads/2016/04/Wedding-Flower-PNG-Clipart.png');
+      background-repeat: no-repeat;
+      background-size: 200px;
+      background-position: top right;
     }
     header h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 3em;
+      font-size: 3.2em;
       margin-bottom: 0.2em;
     }
     header h2 {
-      font-size: 1.5em;
+      font-size: 1.6em;
       margin-top: 0;
     }
     section {
-      padding: 40px 20px;
+      padding: 50px 20px;
       text-align: center;
     }
     .countdown {
@@ -67,6 +71,19 @@
       height: 400px;
       border: 0;
     }
+    .music-control {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .music-control button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #b85b5b;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
     footer {
       background: #f3d6cc;
       padding: 20px;
@@ -75,10 +92,14 @@
   </style>
 </head>
 <body>
-  <audio autoplay loop hidden>
+  <audio id="weddingMusic" loop>
     <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
+
+  <div class="music-control">
+    <button onclick="document.getElementById('weddingMusic').play()">Play Background Music</button>
+  </div>
 
   <header>
     <h1>Eng. Hady & Eng. Yasmeen</h1>
@@ -105,7 +126,6 @@
   <section class="rsvp">
     <h2>RSVP</h2>
     <input type="text" placeholder="Your Name" />
-    <input type="email" placeholder="Your Email" />
     <button>Confirm Attendance</button>
   </section>
 
