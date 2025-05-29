@@ -40,9 +40,24 @@
       font-size: 2em;
       margin: 20px 0;
     }
-    .message {
+    .message, .rsvp {
       max-width: 500px;
       margin: auto;
+    }
+    input, textarea {
+      width: 100%;
+      margin: 5px 0 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      background-color: #d07070;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
     }
     .map {
       width: 100%;
@@ -122,19 +137,19 @@
 
   <section class="message">
     <h2>Send Us a Message</h2>
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdtUNMBQPx4zQhtOWwyGnfQ-wfUfXw-CQvIV8ptFBXAcK27cQ/formResponse" method="POST" target="_blank">
-      <textarea name="entry.1122334455" placeholder="Your lovely message to us..." required></textarea>
-    <button type="submit">Send Message</button>
+    <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+      <textarea name="message" placeholder="Your lovely message to us..." required></textarea>
+      <button type="submit">Send Message</button>
     </form>
   </section>
 
   <section class="rsvp">
-  <h2>RSVP</h2>
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSdtUNMBQPx4zQhtOWwyGnfQ-wfUfXw-CQvIV8ptFBXAcK27cQ/formResponse" method="POST" target="_blank">
-    <input name="entry.1234567890" type="text" placeholder="Your Name" required />
-    <input name="entry.0987654321" type="text" placeholder="Will you attend? (Yes/No)" required />
-    <button type="submit">Confirm Attendance</button>
-  </form>
+    <h2>RSVP</h2>
+    <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+      <input name="name" type="text" placeholder="Your Name" required />
+      <input name="attendance" type="text" placeholder="Will you attend? (Yes/No)" required />
+      <button type="submit">Confirm Attendance</button>
+    </form>
   </section>
 
   <footer>
